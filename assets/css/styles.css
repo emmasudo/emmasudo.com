@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'TeXGyreTermes';
+  src: url('/fonts/TeXGyreTermes-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'TeXGyreTermes';
+  src: url('/fonts/TeXGyreTermes-Italic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  font-family: 'TeXGyreTermes';
+  color: #1D2545;
+  background-color: #fffff5;
+}
+
+
