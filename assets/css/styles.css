@@ -6,6 +6,13 @@
 }
 
 @font-face {
+  font-family: 'OggText';
+  src: url('../fonts/OggText-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'TeXGyreTermes';
   src: url('../fonts/TeXGyreTermes-Regular.woff2') format('woff2');
   font-weight: normal;
@@ -27,10 +34,14 @@
 }
 
 body {
-  font-family: 'Ogg';
+  font-family: 'OggText';
   color: #1D2545;
   font-size: 20px;
   background-color: #fffff5;
 }
 
-
+h1 {
+  font-family: 'Ogg';
+  font-style: italic;
+  font-weight: normal;
+}
