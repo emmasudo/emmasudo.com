@@ -34,14 +34,14 @@
 }
 
 body {
-  font-family: 'OggText';
+  font-family: 'TeXGyreTermes';
   color: #1D2545;
   font-size: 20px;
   background-color: #fffff5;
 }
 
 h1 {
-  font-family: 'Ogg';
+  font-family: 'TeXGyreTermes';
   font-style: italic;
   font-weight: normal;
 }
