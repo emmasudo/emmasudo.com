@@ -45,3 +45,9 @@ h1 {
   font-style: italic;
   font-weight: normal;
 }
+
+h2 {
+  font-family: 'TeXGyreTermes';
+  font-style: italic;
+  font-weight: normal;
+}
