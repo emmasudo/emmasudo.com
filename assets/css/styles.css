@@ -1,53 +1,86 @@
 @font-face {
-  font-family: 'Ogg';
-  src: url('../fonts/Ogg-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'OggText';
-  src: url('../fonts/OggText-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TeXGyreTermes';
-  src: url('../fonts/TeXGyreTermes-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'TeXGyreTermes';
-  src: url('../fonts/TeXGyreTermes-Italic.woff2') format('woff2');
-  font-weight: normal;
-  font-style: italic;
-}
-
-@font-face {
-  font-family: 'JetBrainsMono';
-  src: url('../fonts/JetBrainsMono-Regular.ttf') format('truetype');
+  font-family: 'Geist';
+  src: url('../fonts/Geist-Regular.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
 body {
-  font-family: 'TeXGyreTermes';
-  color: #1D2545;
+  font-family: 'Geist';
   font-size: 20px;
-  background-color: #fffff5;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: left;
 }
 
-h1 {
-  font-family: 'TeXGyreTermes';
-  font-style: italic;
-  font-weight: normal;
+.header-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
 }
 
-h2 {
-  font-family: 'TeXGyreTermes';
-  font-style: italic;
-  font-weight: normal;
+.tabs {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.tabs a,
+.header-row h1 a {
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 2px;
+}
+
+.tabs a:hover,
+.header-row h1 a:hover {
+  border-bottom-color: currentColor;
+}
+
+.intro {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.intro-left {
+  flex: 0 0 200px;
+  text-align: left;
+}
+
+.intro-right {
+  flex: 1;
+}
+
+.highlight-box {
+  background-color: rgba(100, 170, 255, 0.15);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.drop-down {
+  background-color: rgba(100, 170, 255, 0.15);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.drop-down summary {
+  cursor: pointer;
+  font-weight: bold;
+  list-style: none;
+}
+
+.drop-down summary::-webkit-details-marker {
+  display: none;
+}
+
+.drop-down[open] summary {
+  margin-bottom: 1rem;
+}
+
+.drop-down-body img {
+  display: block;
 }

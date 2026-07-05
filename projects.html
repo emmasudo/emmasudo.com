@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Emma - Projects</title>
+    <link rel="icon" type="image/png" href="./assets/images/pinga-zoomed.png">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+  <div class="header-row">
+    <h1><a href="./index.html">Emma Sudo</a></h1>
+    <nav class="tabs">
+      <a href="./projects.html">Projects</a>
+      <a href="./publications.html">Publications</a>
+      <a href="./blog.html">Blog</a>
+    </nav>
+  </div>
+  <details class="drop-down">
+    <summary>Automated Proof Instability Repair in Verus</summary>
+    <div class="drop-down-body">
+      <p>
+        Coming soon...
+      </p>
+    </div>
+  </details>
+
+  <details class="drop-down">
+    <summary>WasmBounds: Eliminating Memory Bounds Checks in WebAssembly</summary>
+    <div class="drop-down-body">
+      <p>
+        WasmBounds is a tool that elides redundant memory bounds checks in WebAssembly (Wasm) using
+        abstract interpretation. Although runtimes for Wasm 1.0 on systems with virtual memory have
+        been able to avoid bounds checks by using hardware guard pages, the presence of newer Wasm
+        features (64-bit memories and single-byte page sizes) or an embedded environment generally
+        requires software bounds checks for memory accesses, at the cost of runtime efficiency.
+        WasmBounds shifts this runtime cost to a one-time static analysis phase. The key insight
+        behind WasmBounds is that safe languages such as Rust and Zig already enforce bounds checks
+        on accesses to container types. Although these safety guarantees are not immediately apparent
+        in the compiled Wasm binary, WasmBounds can recover this information with abstract interpretation.
+        By reasoning over a strided, sign-agnostic interval domain, WasmBounds infers the range of each
+        memory access address and determines whether accesses are provably in bounds. Eliminating these
+        redundant checks yields a roughly 1.2x speedup in our preliminary microbenchmark.
+      </p>
+      <p>
+        <a href="https://cs191w.stanford.edu/projects/Spring2026/_Emma___Sudo_.pdf">Paper</a>
+      </p>
+    </div>
+  </details>
+
+  <details class="drop-down">
+    <summary>wBPF: Safe Kernel Extensibility with WebAssembly</summary>
+    <div class="drop-down-body">
+      <p>wBPF is a tool that I made with Max Cura, Haibib Kerim, and Ari Reid that makes programs written in arbitrary
+        languages “safe” by using WebAssembly as an intermediary and hybridizing static analysis with dynamic
+        instrumentation.
+        Even after making the necessary modifications, wBPF programs run at near native speeds.
+      </p>
+      <p>
+        <a href="https://www.scs.stanford.edu/26wi-cs244c/proj/wBPF.pdf">Paper</a>
+      </p>
+      <div class="image-container">
+        <img src="./assets/images/wbpf_pipeline.png" height="250" alt="wBPF pipeline">
+        <img src="./assets/images/wbpf_results.png" height="250" alt="wBPF results">
+      </div>
+    </div>
+  </details>
+
+  <details class="drop-down">
+    <summary>Ferr-OS: Run WebAssembly on the Raspberry Pi</summary>
+    <div class="drop-down-body">
+      <p>
+        I used Rust to make a simple Raspberry Pi kernel that can run WebAssembly binaries using wasm2c and a WASI
+        layer.
+      </p>
+      <p>
+        <a href="https://github.com/emmasudo/ferr-os">GitHub</a>
+      </p>
+      <img src="./assets/images/ferros.png" height="250" alt="Ferr-OS">
+    </div>
+  </details>
+
+  <details class="drop-down">
+    <summary>Codillon: A Structure Editor for WebAssembly</summary>
+    <div class="drop-down-body">
+      <p>
+        While participating in CURIS 2025, I helped to develop a text editor for WebAssembly where every incomplete
+        program is executable and errors are closely isolated to their origin.
+        Codillon is currently being used to teach introductory computer science to students in 
+        <a href="https://exploreintrosems.stanford.edu/opportunities/computer-play-unconventional-introduction-cs-and-ee">CS10N</a>.
+        I also use Codillon on a daily basis while working on my other WebAssembly projects.
+      </p>
+      <p>
+        <a href="https://codillon.org/">Try it out!</a> &middot; <a href="./assets/pdf/codillon.pdf">Poster</a> &middot; <a href="https://github.com/codillon/codillon">GitHub</a>
+      </p>
+      <img src="./assets/images/codillon.png" height="250" alt="Codillon">
+    </div>
+  </details>
+</body>
+
+</html>

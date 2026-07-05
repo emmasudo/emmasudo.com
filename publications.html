@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Emma - Publications</title>
+    <link rel="icon" type="image/png" href="./assets/images/pinga-zoomed.png">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+</head>
+
+<body>
+    <div class="header-row">
+        <h1><a href="./index.html">Emma Sudo</a></h1>
+        <nav class="tabs">
+            <a href="./projects.html">Projects</a>
+            <a href="./publications.html">Publications</a>
+            <a href="./blog.html">Blog</a>
+        </nav>
+    </div>
+    <h2>Refereed Work</h2>
+    <details class="drop-down">
+        <summary style="font-weight: normal">
+          Continuation-Centric Computing with Arca.
+          Akshay Srivatsan, Yuhan Deng, Katherine Mohr, <strong>Emma Sudo</strong>, Sebastian Ingino, Francis Chua,
+          and Keith Winstein.
+          <em>OSDI 2026</em>.
+        </summary>
+        <div class="drop-down-body">
+            <p>Abstract:</p>
+            <p>
+              This paper presents continuation-centric computing, an operating system design paradigm
+              for “serverless”-style workloads: short-lived tasks that spend a substantial fraction of
+              time waiting on dependencies and other services. Under this paradigm, a running function
+              can capture its current continuation—a lightweight snapshot of its state—as a distinct
+              function that can be paused, migrated, or copied as needed.
+            </p>
+            <p>
+              This paper evaluates the continuation-centric computing model using Arca, an operating system
+              providing continuation capture as a core service. Arca supports a process abstraction that is
+              broadly similar to Unix processes in guarantees and isolation, but additionally provides efficient
+              capture and resumption of serializable, portable continuations.
+            </p>
+        </div>
+    </details>
+    <h2>Posters</h2>
+    <details class="drop-down">
+        <summary style="font-weight: normal">
+            WasmBounds: Eliminating Memory Bounds Checks in WebAssembly.
+            <strong>Emma Sudo</strong> and Keith Winstein.
+            <em>OSDI 2026</em>.
+        </summary>
+        <div class="drop-down-body">
+            <p>Abstract:</p>
+            <p>
+              WasmBounds is a tool that elides redundant memory bounds checks in WebAssembly (Wasm) using
+              abstract interpretation. Although runtimes for Wasm 1.0 on systems with virtual memory have
+              been able to avoid bounds checks by using hardware guard pages, the presence of newer Wasm
+              features (64-bit memories and single-byte page sizes) or an embedded environment generally
+              requires software bounds checks for memory accesses, at the cost of runtime efficiency.
+              WasmBounds shifts this runtime cost to a one-time static analysis phase. The key insight
+              behind WasmBounds is that safe languages such as Rust and Zig already enforce bounds checks
+              on accesses to container types. Although these safety guarantees are not immediately apparent
+              in the compiled Wasm binary, WasmBounds can recover this information with abstract interpretation.
+              By reasoning over a strided, sign-agnostic interval domain, WasmBounds infers the range of each
+              memory access address and determines whether accesses are provably in bounds. Eliminating these
+              redundant checks yields a roughly 1.2x speedup in our preliminary microbenchmark.
+            </p>
+        </div>
+    </details>
+</body>
+
+</html>

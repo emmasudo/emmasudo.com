@@ -2,32 +2,40 @@
 <html>
   <head>
     <title>Emma Sudo</title>
-    <link rel="icon" type="image/png" href="./assets/images/otter.png">
+    <link rel="icon" type="image/png" href="./assets/images/pinga-zoomed.png">
     <link rel="stylesheet" href="./assets/css/styles.css">
   </head>
   <body>
-    <h1>Emma Sudo</h1>
-    <p>I'm a third-year undergraduate student in Computer Science at Stanford University, advised by Professor <a href="https://cs.stanford.edu/~keithw/">Keith Winstein</a>.</p>
-    <p>My main interest is in computer systems. I'm particularly interested in what I call "business-casual methods" (a phrase coined by <a href="https://katherinemohr.github.io/">Katherine Mohr</a>).
-    To me, business-casual methods is an approach to systems research that combines the spirit of formal methods/programming languages theory with hands-on, low-level system building.</p>
-    <h2>Research</h2>
-    <a href="https://www.scs.stanford.edu/26wi-cs244c/proj/wBPF.pdf">wBPF: Safe Kernel Extensibility with WebAssembly</a>
-    <p>wBPF is a tool that I made with Max Cura, Haibib Kerim, and Ari Reid that makes programs written in arbitrary languages “safe” by using WebAssembly as an intermediary and hybridizing static analysis with dynamic instrumentation.
-    Even after making the necessary modifications, wBPF programs run at near native speeds.</p>
-    <div class="image-container">
-      <img src="./assets/images/wbpf_pipeline.png" height="250" alt="wBPF pipeline">
-      <img src="./assets/images/wbpf_results.png" height="250" alt="wBPF results">
+    <div class="header-row">
+      <h1>Emma Sudo</h1>
+      <nav class="tabs">
+        <a href="./projects.html">Projects</a>
+        <a href="./publications.html">Publications</a>
+        <a href="./blog.html">Blog</a>
+      </nav>
     </div>
-    <br>
-    <a href="https://github.com/emmasudo/ferr-os">Ferr-OS: Run WebAssembly on the Raspberry Pi</a>
-    <p>I used Rust to make a simple Raspberry Pi kernel that can run WebAssembly binaries using wasm2c and a WASI layer.</p>
-    <img src="./assets/images/ferros.png" height="250" alt="Ferr-OS">
-    <br>
-    <a href="https://codillon.org/">Codillon: A Structure Editor for WebAssembly</a>
-    <p>While participating in CURIS 2025, I helped to develop a text editor for WebAssembly where every incomplete program is executable and errors are closely isolated to their origin.
-    Codillon is currently being used to teach introductory computer science to students in <a href="https://exploreintrosems.stanford.edu/opportunities/computer-play-unconventional-introduction-cs-and-ee">CS10N</a>.
-    I also use Codillon on a daily basis while working on my other WebAssembly projects.</p>
-    <p><a href="./assets/pdf/codillon.pdf">Here</a> is a poster I made about Codillon:</p>
-    <img src="./assets/images/codillon.png" height="250" alt="Codillon">
+    <div class="intro">
+      <div class="intro-left">
+        <div><img src="./assets/images/pinga.png" height="200" alt="Profile Picture"></div>
+        <p style="font-size: 15px">emmasudo [at] cs [dot] stanford [dot] edu</p>
+        <p><a href="https://github.com/emmasudo"><img src="./assets/images/github.png" height="24" alt="GitHub"></a>
+        <a href="./assets/pdf/Sudo_CV.pdf"><img src="./assets/images/cv.png" height="24" alt="CV"></a></p>
+      </div>
+      <div class="intro-right">
+        <p>I'm a fourth-year undergraduate student in Computer Science at Stanford University, advised by <a href="https://cs.stanford.edu/~keithw/">Keith Winstein</a>.</p>
+        <p>My interests lie at the intersection of computer systems, formal methods, and software engineering.</p>
+        <p>I want safe and correct systems to become the norm. To further that vision, I mostly work 
+          on tools that make writing verified code more ergonomic and tools that make secure code 
+          more efficient. I am also thinking about how LLMs can help humans write correct code and how undergraduate
+          students should be learning about verification. Please reach out if you want to discuss!
+      </div>
+    </div>
+    <div class="highlight-box"><strong>Update:</strong> I am applying to PhD programs during the 2026-2027 cycle!</div>
+    <h2>News</h2>
+    <ul>
+      <li><strong>[July 2026]</strong> - I will also be presenting my poster "WasmBounds: Eliminating Memory Bounds Checks in WebAssembly" at OSDI'26!</li>
+      <li><strong>[June 2026]</strong> - "Continuation-Centric Computing with Arca" was accepted at OSDI'26!</li>
+      <li><strong>[May 2026]</strong> - This summer, I will be working on Verus with <a href="https://www.andrew.cmu.edu/user/bparno/">Bryan Parno</a> at CMU!</li>
+    </ul>
   </body>
 </html>
