@@ -67,6 +67,18 @@ body {
   margin: 1.5rem 0;
 }
 
+.drop-down.wasm {
+  background-color: rgba(101, 79, 240, 0.2);
+}
+
+.drop-down.rust {
+  background-color: rgba(220, 53, 69, 0.2);
+}
+
+.drop-down.verus {
+  background-color: rgba(243, 152, 68, 0.2);
+}
+
 .drop-down summary {
   cursor: pointer;
   font-weight: bold;
