@@ -79,6 +79,39 @@ body {
   background-color: rgba(243, 152, 68, 0.2);
 }
 
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.legend-swatch {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.legend-swatch.wasm {
+  background-color: rgba(101, 79, 240, 0.2);
+}
+
+.legend-swatch.rust {
+  background-color: rgba(220, 53, 69, 0.2);
+}
+
+.legend-swatch.verus {
+  background-color: rgba(243, 152, 68, 0.2);
+}
+
 .drop-down summary {
   cursor: pointer;
   font-weight: bold;

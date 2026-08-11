@@ -17,12 +17,27 @@
       <a href="./blog.html">Blog</a>
     </nav>
   </div>
+  <div class="legend">
+    <span class="legend-item"><span class="legend-swatch verus"></span>Verus</span>
+    <span class="legend-item"><span class="legend-swatch wasm"></span>WebAssembly</span>
+    <span class="legend-item"><span class="legend-swatch rust"></span>Rust</span>
+  </div>
+
   <details class="drop-down verus">
-    <summary>Automated Proof Instability Repair in Verus</summary>
+    <summary>Automatic Proof Instability Repair in Verus</summary>
     <div class="drop-down-body">
       <p>
-        Coming soon...
+        During my summer at CMU, I began working on Morpho, a tool that automatically fixes proof instability in Verus.
+        Proof instability is when semantically meaningless changes cause the Verus proof to suddenly fail.
+        Instability is one of the most signficant challenges in verifying in real systems.
+        Morpho is a continuation of Yi Zhou and Amar Shah's Cazamariposas tool.
+        Cazamariposas finds instability fixes on the SMT level, and Morpho lifts those fixes to the Verus source level to repair
+        instability without developer involvement. So far, this work has fixed almost half of the instability in Verita, a collection of projects that use Verus.
       </p>
+      <p>
+        <a href="./assets/pdf/morpho.pdf">CMU REUSE Poster</a>
+      </p>
+      <img src="./assets/images/morpho.png" height="700" alt="Morpho">
     </div>
   </details>
 
@@ -44,8 +59,11 @@
         redundant checks yields a roughly 1.2x speedup in our preliminary microbenchmark.
       </p>
       <p>
-        <a href="https://cs191w.stanford.edu/projects/Spring2026/_Emma___Sudo_.pdf">Paper</a>
+        <a href="./assets/pdf/wasm_research_day_2026.pdf">Wasm Research Day Slides</a> &middot;
+        <a href="./assets/pdf/wasmbounds.pdf">OSDI Poster</a> &middot;
+        <a href="https://cs191w.stanford.edu/projects/Spring2026/_Emma___Sudo_.pdf">CS191W Paper</a>
       </p>
+      <img src="./assets/images/wasmbounds.png" height="700" alt="WasmBounds" style="background-color: white;">
     </div>
   </details>
 
@@ -58,7 +76,7 @@
         Even after making the necessary modifications, wBPF programs run at near native speeds.
       </p>
       <p>
-        <a href="https://www.scs.stanford.edu/26wi-cs244c/proj/wBPF.pdf">Paper</a>
+        <a href="https://www.scs.stanford.edu/26wi-cs244c/proj/wBPF.pdf">CS244C Paper</a>
       </p>
       <div class="image-container">
         <img src="./assets/images/wbpf_pipeline.png" height="250" alt="wBPF pipeline">
@@ -68,7 +86,7 @@
   </details>
 
   <details class="drop-down rust">
-    <summary>Ferr-OS: Run WebAssembly on the Raspberry Pi</summary>
+    <summary>Ferr-OS: Rust Kernel for Safely Running WebAssembly on the Raspberry Pi</summary>
     <div class="drop-down-body">
       <p>
         I used Rust to make a simple Raspberry Pi kernel that can run WebAssembly binaries using wasm2c and a WASI
@@ -94,7 +112,7 @@
       <p>
         <a href="https://codillon.org/">Try it out!</a> &middot; <a href="./assets/pdf/codillon.pdf">Poster</a> &middot; <a href="https://github.com/codillon/codillon">GitHub</a>
       </p>
-      <img src="./assets/images/codillon.png" height="250" alt="Codillon">
+      <img src="./assets/images/codillon.png" height="600" alt="Codillon">
     </div>
   </details>
 </body>
